@@ -789,6 +789,71 @@ h2{font-weight:700;letter-spacing:-.04em}
 
 #faq{padding-bottom:160px}
 
+/* ===== Fatos do problema ===== */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:-24px 0 56px;border-top:2px solid var(--noite)}
+.fact{padding:24px 24px 4px 0}
+.fact+.fact{padding-left:24px;border-left:1px solid var(--borda)}
+.fact strong{display:block;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--noite)}
+.fact span{display:block;margin-top:8px;color:var(--texto-suave);font-size:1rem;max-width:22em}
+.fact-src{grid-column:1/-1;margin:14px 0 0;font-size:.82rem;color:#8A8499}
+@media(max-width:760px){.facts{grid-template-columns:1fr}.fact+.fact{padding-left:0;border-left:0;border-top:1px solid var(--borda)}}
+
+/* ===== Personas ===== */
+.personas{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:1000px){.personas{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.personas{grid-template-columns:1fr}}
+.pers{display:flex;flex-direction:column;padding:26px;border-radius:24px;background:var(--papel);border:1px solid var(--borda)}
+.pers-ava{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.95rem;margin-bottom:18px;color:#fff}
+.pers-ava.a1{background:var(--violeta)}.pers-ava.a2{background:var(--noite)}.pers-ava.a3{background:var(--verde);color:var(--noite)}.pers-ava.a4{background:#8A8499}
+.pers h3{font-size:1.2rem;margin-bottom:8px}
+.pers p{color:var(--texto-suave);font-size:.98rem;margin:0 0 20px;flex:1}
+.pers-ch{display:flex;align-items:flex-start;gap:8px;padding-top:14px;border-top:1px dashed var(--borda);font-size:.88rem;font-weight:600;color:var(--noite)}
+.pers-ch .i{width:17px;height:17px;margin-top:2px;color:var(--verde-texto)}
+.pers-note{margin:18px 0 0;font-size:.85rem;color:#8A8499}
+
+/* ===== Tecnologia ===== */
+.tech-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start}
+@media(max-width:900px){.tech-grid{grid-template-columns:1fr}}
+.tecnologia .section-head{margin-bottom:0}
+.engine{margin-top:40px;padding:28px;border-radius:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.engine h3{font-size:1.2rem;margin-bottom:8px}
+.engine p{color:rgba(255,255,255,.72);font-size:1rem;margin:0}
+.phases{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 16px}
+.phases div{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.06)}
+.phases b{display:block;color:var(--verde);font-size:.9rem;margin-bottom:4px}
+.phases span{font-size:.92rem;color:rgba(255,255,255,.78);line-height:1.45}
+.engine .engine-note{font-size:.88rem;color:rgba(255,255,255,.55)}
+@media(max-width:560px){.phases{grid-template-columns:1fr}}
+.tech-list{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.14)}
+.tech-list li{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.tech-list b{font-size:1.05rem;color:#fff}
+.tech-list span{color:rgba(255,255,255,.7);font-size:1rem}
+@media(max-width:560px){.tech-list li{grid-template-columns:1fr;gap:4px}}
+
+/* ===== ODS (3) e metas ===== */
+#impacto .ods{grid-template-columns:repeat(3,1fr)}
+#impacto .ods-card{flex-direction:column;align-items:flex-start;gap:14px}
+#impacto .ods-num{font-size:clamp(3.4rem,6vw,4.6rem)}
+@media(max-width:900px){#impacto .ods{grid-template-columns:1fr}}
+.goals{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--noite)}
+.goal{padding:24px 20px 6px 0}
+.goal+.goal{padding-left:20px;border-left:1px solid var(--borda)}
+.goal strong{display:block;font-size:clamp(2rem,3.6vw,2.8rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--verde-texto)}
+.goal span{display:block;margin-top:8px;color:var(--texto-suave);font-size:.98rem}
+.goals-note{margin:16px 0 0;font-size:.85rem;color:#8A8499}
+@media(max-width:900px){.goals{grid-template-columns:1fr 1fr}.goal:nth-child(3){padding-left:0;border-left:0}.goal:nth-child(n+3){border-top:1px solid var(--borda)}}
+@media(max-width:520px){.goals{grid-template-columns:1fr}.goal+.goal{padding-left:0;border-left:0;border-top:1px solid var(--borda)}}
+
+/* ===== Notebooks: tipografia um pouco menor ===== */
+@media (min-width:1024px) and (max-width:1600px){
+  html{font-size:15px}
+  body{font-size:16.5px}
+  .hero-title{font-size:clamp(2.6rem,5.6vw,4.6rem)}
+  h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
+  section{padding:120px 0}
+  .problema{padding-top:120px}
+}
+
 /* ===== Movimento reduzido ===== */
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -871,7 +936,7 @@ h2{font-weight:700;letter-spacing:-.04em}
 
   <div class="container hero-grid">
     <div>
-      <div class="badge fade-in" style="--d:0"><b>Proposta</b>Alerta hiperlocal · ODS 11 e 13</div>
+      <div class="badge fade-in" style="--d:0"><b>Proposta</b>Alerta hiperlocal · ODS 10, 11 e 13</div>
       <h1 class="hero-title">
         <span class="w" style="--i:0">Alerta</span> <span class="w" style="--i:1">certo,</span><br>
         <span class="w" style="--i:2">na</span> <span class="w grad" style="--i:3">rua</span> <span class="w grad" style="--i:4">certa,</span><br>
@@ -954,6 +1019,12 @@ h2{font-weight:700;letter-spacing:-.04em}
       <h2>Quando a chuva aperta, a informação chega <span class="grad-dark">tarde ou não chega.</span></h2>
       <p>Chuvas extremas estão cada vez mais frequentes, mas os alertas ainda são amplos demais para quem precisa agir na própria rua.</p>
     </div>
+    <div class="facts reveal">
+      <div class="fact"><strong>8,27 mi</strong><span>de pessoas viviam em áreas com risco de enchentes e deslizamentos</span></div>
+      <div class="fact"><strong>872</strong><span>municípios monitorados pelo Cemaden tinham moradores nessas áreas</span></div>
+      <div class="fact"><strong>17,8%</strong><span>dessa população eram crianças de até 5 anos e idosos</span></div>
+      <p class="fact-src">Fonte: IBGE e Cemaden, População em áreas de risco no Brasil, com base no Censo 2010.</p>
+    </div>
     <div class="bento">
       <article class="card big reveal">
         <div>
@@ -986,8 +1057,46 @@ h2{font-weight:700;letter-spacing:-.04em}
   </div>
 </section>
 
+<!-- ================= PESSOAS ================= -->
+<section class="white" id="pessoas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Quem a Aviva protege</span>
+      <h2>Feita a partir de <span class="grad-dark">pessoas reais.</span></h2>
+      <p>Perfis comuns nas comunidades em área de risco orientaram cada decisão do projeto.</p>
+    </div>
+    <div class="personas">
+      <article class="pers reveal">
+        <span class="pers-ava a1">DL</span>
+        <h3>Dona Lourdes, 68</h3>
+        <p>Mora há 30 anos na encosta. Usa um celular simples, sem internet, e tem dificuldade para ler.</p>
+        <span class="pers-ch"><svg class="i"><use href="#ic-phone"/></svg>Recebe por ligação de voz e SMS</span>
+      </article>
+      <article class="pers reveal" style="--d:1">
+        <span class="pers-ava a2">JO</span>
+        <h3>João, 34</h3>
+        <p>Entregador, mora perto do córrego e vê a água subir antes de qualquer sensor.</p>
+        <span class="pers-ch"><svg class="i"><use href="#ic-wa"/></svg>Recebe no WhatsApp e registra ocorrências</span>
+      </article>
+      <article class="pers reveal" style="--d:2">
+        <span class="pers-ava a3">MA</span>
+        <h3>Marta, 45</h3>
+        <p>Agente comunitária na zona rural, onde o sinal é fraco. Conhece cada família da região.</p>
+        <span class="pers-ch"><svg class="i"><use href="#ic-wifioff"/></svg>Registra em campo, mesmo offline</span>
+      </article>
+      <article class="pers reveal" style="--d:3">
+        <span class="pers-ava a4">CA</span>
+        <h3>Carlos, 39</h3>
+        <p>Técnico da Defesa Civil. Durante as chuvas, recebe ligações e mensagens soltas de todo lado.</p>
+        <span class="pers-ch"><svg class="i"><use href="#ic-shield"/></svg>Valida relatos e dispara pelo painel</span>
+      </article>
+    </div>
+    <p class="pers-note">Personas fictícias, baseadas em perfis frequentes nas áreas de risco.</p>
+  </div>
+</section>
+
 <!-- ================= HIPERLOCAL ================= -->
-<section class="white" id="hiperlocal">
+<section id="hiperlocal">
   <div class="container">
     <div class="section-head center reveal">
       <span class="eyebrow">Alerta por rua</span>
@@ -1248,6 +1357,36 @@ h2{font-weight:700;letter-spacing:-.04em}
   </div>
 </section>
 
+<!-- ================= TECNOLOGIA ================= -->
+<section class="dark tecnologia" id="tecnologia">
+  <div class="container">
+    <div class="tech-grid">
+      <div class="section-head reveal">
+        <span class="eyebrow">Tecnologia</span>
+        <h2>Simples para quem usa, <span class="grad">robusta por trás.</span></h2>
+        <p>Tecnologias abertas e consolidadas, que funcionam em celulares simples e cabem no orçamento de prefeituras de qualquer porte.</p>
+        <div class="engine reveal">
+          <h3>Motor de risco</h3>
+          <p>O território é dividido em trechos de rua e de encosta. Para cada trecho, a Aviva combina chuva acumulada e prevista, suscetibilidade do terreno e relatos validados.</p>
+          <div class="phases">
+            <div><b>Fase 1</b><span>Regras de limiar, transparentes e calibradas com a Defesa Civil.</span></div>
+            <div><b>Fase 2</b><span>Aprendizado de máquina treinado com o histórico de ocorrências validadas.</span></div>
+          </div>
+          <p class="engine-note">A decisão de disparar é sempre de um técnico da Defesa Civil.</p>
+        </div>
+      </div>
+      <ul class="tech-list reveal">
+        <li><b>Portal do cidadão</b><span>Aplicação web progressiva, que abre direto pelo link do alerta, sem instalar nada.</span></li>
+        <li><b>Ferramenta do agente</b><span>Funciona offline e sincroniza os registros quando o sinal volta.</span></li>
+        <li><b>Painel da Defesa Civil</b><span>Mapa de risco em tempo real sobre OpenStreetMap.</span></li>
+        <li><b>Banco geográfico</b><span>PostgreSQL com PostGIS, para saber quais casas estão perto de cada trecho de risco.</span></li>
+        <li><b>Integrações</b><span>Login gov.br, WhatsApp Business, SMS, ligação de voz e dados de chuva do Cemaden e do INMET.</span></li>
+        <li><b>Nuvem</b><span>Escala automaticamente para aguentar o pico de acessos durante um evento extremo.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- ================= PARA QUEM ================= -->
 <section class="white" id="para-quem">
   <div class="container">
@@ -1287,7 +1426,7 @@ h2{font-weight:700;letter-spacing:-.04em}
     <div class="section-head reveal">
       <span class="eyebrow">Impacto</span>
       <h2>Comunidades mais preparadas <span class="grad-dark">para o clima que mudou.</span></h2>
-      <p>A Aviva contribui diretamente para dois Objetivos de Desenvolvimento Sustentável da Agenda 2030.</p>
+      <p>A Aviva contribui para três Objetivos de Desenvolvimento Sustentável da Agenda 2030.</p>
     </div>
     <div class="ods">
       <article class="card ods-card reveal">
@@ -1298,26 +1437,20 @@ h2{font-weight:700;letter-spacing:-.04em}
         <div class="ods-num grad-dark"><small>ODS</small>13</div>
         <div><h3>Ação contra a mudança do clima</h3><p>Mais capacidade de adaptação e resposta a eventos extremos, como chuvas intensas.</p></div>
       </article>
+      <article class="card ods-card reveal" style="--d:2">
+        <div class="ods-num grad-dark"><small>ODS</small>10</div>
+        <div><h3>Redução das desigualdades</h3><p>A mesma informação para todos, inclusive quem não tem internet, não lê ou mora na zona rural.</p></div>
+      </article>
     </div>
 
-    <p class="metas-title reveal">Metas do projeto</p>
-    <div class="grid g3">
-      <article class="card meta reveal">
-        <h3><svg class="i"><use href="#ic-clock"/></svg>Menos tempo de resposta</h3>
-        <p>Reduzir o tempo entre a ocorrência na rua e o alerta para a vizinhança.</p>
-        <p class="indicador"><span>Como medir</span>Minutos entre o relato e o alerta</p>
-      </article>
-      <article class="card meta reveal" style="--d:1">
-        <h3><svg class="i"><use href="#ic-users"/></svg>Mais cobertura</h3>
-        <p>Ampliar o número de moradores de áreas de risco que recebem alertas.</p>
-        <p class="indicador"><span>Como medir</span>Moradores de áreas de risco cadastrados</p>
-      </article>
-      <article class="card meta reveal" style="--d:2">
-        <h3><svg class="i"><use href="#ic-shield"/></svg>Mais dados confiáveis</h3>
-        <p>Aumentar os relatos validados que alimentam o histórico local.</p>
-        <p class="indicador"><span>Como medir</span>Relatos validados por mês</p>
-      </article>
+    <p class="metas-title reveal">Metas do piloto</p>
+    <div class="goals reveal">
+      <div class="goal"><strong>70%</strong><span>das famílias das áreas de risco mapeadas cadastradas para receber alertas</span></div>
+      <div class="goal"><strong>5 min</strong><span>para entregar 90% das mensagens depois do disparo</span></div>
+      <div class="goal"><strong>15 min</strong><span>para a Defesa Civil analisar cada relato durante as chuvas</span></div>
+      <div class="goal"><strong>100%</strong><span>dos cadastrados sem internet alcançados por SMS ou ligação de voz</span></div>
     </div>
+    <p class="goals-note">Metas iniciais para o primeiro ano em um município piloto, a validar com a Defesa Civil local.</p>
   </div>
 </section>
 
@@ -1376,7 +1509,7 @@ h2{font-weight:700;letter-spacing:-.04em}
     </div>
     <div class="foot-bottom">
       <span>© <span id="ano">2026</span> Aviva. Dados pessoais tratados conforme a LGPD.</span>
-      <span>Contribuindo para os ODS 11 e 13</span>
+      <span>Contribuindo para os ODS 10, 11 e 13</span>
     </div>
   </div>
 </footer>
